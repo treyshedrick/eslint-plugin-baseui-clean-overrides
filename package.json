@@ -5,7 +5,9 @@
   "keywords": [
     "eslint",
     "eslintplugin",
-    "eslint-plugin"
+    "eslint-plugin",
+    "baseui",
+    "overrides"
   ],
   "author": "Trey Shedrick",
   "main": "lib/index.js",
