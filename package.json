@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-baseui-clean-overrides",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Use constants instead of writing overrides inline",
   "keywords": [
     "eslint",
