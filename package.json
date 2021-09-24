@@ -13,7 +13,10 @@
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha tests --recursive"
+    "test": "mocha tests --recursive",
+    "publish:patch": "npm version patch --force && npm publish",
+    "publish:minor": "npm version minor --force && npm publish",
+    "publish:major": "npm version major --force && npm publish"
   },
   "dependencies": {
     "requireindex": "^1.1.0"
