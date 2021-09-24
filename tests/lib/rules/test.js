@@ -1,6 +1,6 @@
 "use strict";
 const eslint = require('eslint');
-const rule = require("../../../lib/rules/eslint-plugin-baseui-clean-overrides");
+const rule = require("../../../lib/rules/basic");
 
 const ruleTester = new eslint.RuleTester({
     parserOptions: {
