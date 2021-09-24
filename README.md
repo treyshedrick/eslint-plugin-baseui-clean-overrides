@@ -1,6 +1,10 @@
 # eslint-plugin-baseui-clean-overrides
 
-Use constants instead of writing overrides inline
+Use constants instead of writing overrides inline.
+
+## Why?
+
+Overrides in baseui can be overwhelming when using them inline with other react components. This plugin solves that by enforcing users to spread the overrides prop into the component instead of wriing the override inline.
 
 ## Installation
 
@@ -29,18 +33,14 @@ Add `baseui-clean-overrides` to the plugins section of your `.eslintrc` configur
 ```
 
 
-Then configure the rules you want to use under the rules section.
+Then configure to use the basic rule under the rules section.
 
 ```json
 {
     "rules": {
-        "baseui-clean-overrides/rule-name": 2
+        "baseui-clean-overrides/basic": 2
     }
 }
 ```
-
-## Supported Rules
-
-* Fill in provided rules here
 
 
