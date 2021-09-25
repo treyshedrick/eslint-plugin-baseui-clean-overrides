@@ -48,7 +48,7 @@ Then configure to use the basic rule under the rules section.
 
 #### The following would be acceptable
 ```sh
-import * as React from "react";
+import React, { useState } from "react";
 import { Input } from "baseui/input";
 
 const inputOverrides = {
@@ -78,7 +78,7 @@ export default () => {
 
 #### The following would throw a linting error/warning
 ```sh
-import * as React from "react";
+import React, { useState } from "react";
 import { Input } from "baseui/input";
 
 export default () => {
