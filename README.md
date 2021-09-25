@@ -1,10 +1,10 @@
 # eslint-plugin-baseui-clean-overrides
 
-Use constants instead of writing overrides inline.
+Use constants instead of writing overrides inline. 
 
 ## Why?
 
-Overrides in baseui can be overwhelming when using them inline with other react components. This plugin solves that by enforcing users to spread the overrides prop into the component instead of wriing the override inline.
+Overrides in baseui can be overwhelming when using them inline. This plugin solves that by enforcing users to spread the overrides prop into the component, so you can focus on the logic!
 
 ## Installation
 
@@ -40,6 +40,65 @@ Then configure to use the basic rule under the rules section.
     "rules": {
         "baseui-clean-overrides/basic": 2
     }
+}
+```
+
+
+## Examples
+
+#### The following would be acceptable
+```sh
+import * as React from "react";
+import { Input } from "baseui/input";
+
+const inputOverrides = {
+    overrides: {
+        Root: {
+          style: ({ $theme }) => ({
+            outline: `${$theme.colors.warning600} solid`,
+            backgroundColor: $theme.colors.warning600
+          })
+        }
+    }
+}
+
+export default () => {
+  const [value, setValue] = useState("");
+
+  return (
+    <Input
+      value={value}
+      onChange={e => setValue(e.target.value)}
+      placeholder="Controlled Input"
+      {...inputOverrides}
+    />
+  );
+}
+```
+
+#### The following would throw a linting error/warning
+```sh
+import * as React from "react";
+import { Input } from "baseui/input";
+
+export default () => {
+  const [value, setValue] = useState("");
+
+  return (
+    <Input
+      value={value}
+      onChange={e => setValue(e.target.value)}
+      placeholder="Controlled Input"
+      overrides={{
+        Root: {
+          style: ({ $theme }) => ({
+            outline: `${$theme.colors.warning600} solid`,
+            backgroundColor: $theme.colors.warning600
+          })
+        },
+      }}
+    />
+  );
 }
 ```
 
